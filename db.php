@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 define('DS', DIRECTORY_SEPARATOR);
 
-$database = 'db_infokom';
+$database = 'kopi';
 $user = 'root';
 $pass = '';
 $host = 'localhost';
