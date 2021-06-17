@@ -167,7 +167,7 @@
                 <!-- /.search form -->
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
-                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'home' || strtolower($this->uri->segment(1)) == '') echo 'active' ?>"><a href="<?= base_url() ?>admin/home">
+                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'home' || strtolower($this->uri->segment(1)) == '') echo 'active' ?>"><a href="<?= base_url() ?>home">
                             <i class="fa fa-home"></i>
                             <span>Home</span>
                         </a>
@@ -175,14 +175,14 @@
 
 
                     <!-- Surat Masuj -->
-                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_masuk') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_masuk">
+                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_masuk') echo 'active' ?>"><a href="<?= base_url() ?>surat_masuk">
                             <i class="fa fa-folder"></i> <span>Surat Masuk</span>
                         </a>
                     </li>
                     <!-- end surat masuk -->
 
                     <!-- Surat Keluar -->
-                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_keluar') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_keluar">
+                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_keluar') echo 'active' ?>"><a href="<?= base_url() ?>surat_keluar">
                             <i class="fa fa-folder"></i> <span>Surat Keluar</span>
                         </a>
                     </li>
@@ -202,10 +202,10 @@
                         </a>
                         <ul class="treeview-menu">
                             <li class="<?php if (strtolower($this->uri->segment(2)) == 'user') echo 'active' ?>">
-                                <a href="<?= base_url() ?>admin/user"><i class="fa fa-user-plus"></i> User</a>
+                                <a href="<?= base_url() ?>user"><i class="fa fa-user-plus"></i> User</a>
                             </li>
                             <li class="<?php if (strtolower($this->uri->segment(2)) == 'user_level') echo 'active' ?>">
-                                <a href="<?= base_url() ?>admin/user_level"><i class="fa fa-users"></i> User Level</a>
+                                <a href="<?= base_url() ?>user_level"><i class="fa fa-users"></i> User Level</a>
                             </li>
                         </ul>
                     </li>

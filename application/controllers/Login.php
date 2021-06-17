@@ -24,7 +24,7 @@ class Login extends CI_Controller
         $error_message = $auth->login($email, $password);
 
         if (empty(trim($error_message))) {
-            redirect('admin');
+            redirect('home');
         } else {
             $this->session->set_flashdata('error_message', $error_message);
             redirect('login');
