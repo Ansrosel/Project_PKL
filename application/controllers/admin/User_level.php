@@ -13,7 +13,7 @@ class User_level extends CI_Controller
         $this->load->library('grocery_CRUD');
 
         $this->load->library('Auth');
-        $auth=new Auth();
+        $auth = new Auth();
         $auth->is_logged_in()->is_administrator();
     }
 
@@ -29,11 +29,11 @@ class User_level extends CI_Controller
         $crud->fields('user_level');
         $crud->required_fields('user_level');
 
-        $crud->unset_add();
-        $crud->unset_edit();
-        $crud->unset_delete();
+        // $crud->unset_add();
+        // $crud->unset_edit();
+        // $crud->unset_delete();
 
-        $columns=array('user_level');
+        $columns = array('user_level');
         $crud->columns($columns);
 
         $crud->set_subject('User Level');

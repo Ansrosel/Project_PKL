@@ -174,57 +174,6 @@
                     </li>
 
 
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-newspaper-o"></i>
-                            <span>Berita</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'blog') echo 'active' ?>"><a href="<?= base_url() ?>admin/blog"><i class="fa fa-circle-o"></i> Berita</a></li>
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'agenda') echo 'active' ?>"><a href="#"><i class="fa fa-circle-o"></i> Agenda</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- Slider -->
-                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'slider') echo 'active' ?>"><a href="<?= base_url() ?>admin/slider">
-                            <i class="fa fa-image"></i> <span>Slider</span>
-                            <span class="pull-right-container">
-                                <!-- <i class="fa fa-angle-left pull-right"></i> -->
-                            </span>
-                        </a>
-                    </li>
-                    <!-- End Slider -->
-
-
-                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'regulasi') echo 'active' ?>"><a href="<?= base_url() ?>admin/Regulasi">
-                            <i class="fa fa-book"></i>
-                            <span>Regulasi</span>
-                        </a>
-                    </li>
-
-                    <!-- Profil -->
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-pie-chart"></i>
-                            <span>Profil</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <!-- <ul class="treeview-menu">
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_masuk') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_masuk"><i class="fa fa-circle-o"></i> Surat Masuk</a></li>
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_keluar') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_keluar"><i class="fa fa-circle-o"></i> Surat Keluar</a></li>
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'sejarah_dinas') echo 'active' ?>"><a href="<?= base_url() ?>admin/sejarah_dinas/index/edit/1"><i class="fa fa-circle-o"></i> Sejarah Dinas</a></li>
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'visi_misi') echo 'active' ?>"><a href="<?= base_url() ?>admin/visi_misi/index/edit/1"><i class="fa fa-circle-o"></i> Visi Dan Misi</a></li>
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'tupoksi') echo 'active' ?>"><a href="<?= base_url() ?>admin/tupoksi"><i class="fa fa-circle-o"></i> Tugas Dan Fungsi</a></li>
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'personil') echo 'active' ?>"><a href="<?= base_url() ?>admin/personil/index/edit/1"><i class="fa fa-circle-o"></i> Personil Diskominfo</a></li>
-                        </ul> -->
-                    </li>
-                    <!-- End Profil -->
-
                     <!-- Surat Masuj -->
                     <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_masuk') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_masuk">
                             <i class="fa fa-folder"></i> <span>Surat Masuk</span>
@@ -234,30 +183,12 @@
 
                     <!-- Surat Keluar -->
                     <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_keluar') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_keluar">
-                            <i class="fa fa-link"></i> <span>Surat Keluar</span>
+                            <i class="fa fa-folder"></i> <span>Surat Keluar</span>
                         </a>
                     </li>
                     <!-- End Surat keluar -->
 
-                    <!-- Setting -->
-                    <!-- <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-cogs"></i> <span>Setting</span>
-                            <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'header') echo 'active' ?>">
-                                <a href="<?= base_url('admin/header/') ?>">
-                                    <i class="fa fa-circle-o"></i>
-                                    Header
-                                </a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-circle-o"></i> Footer</a></li>
-                        </ul>
-                    </li> -->
-                    <!-- End Setting -->
+
 
                     <!-- Start Menu -->
                     <!-- User -->
@@ -279,16 +210,6 @@
                         </ul>
                     </li>
                     <!-- End User -->
-
-
-                    <!-- Download -->
-                    <!-- <li class="<?php if (strtolower($this->uri->segment(2)) == 'download') echo 'active' ?>"><a href="<?= base_url() ?>admin/download">
-                            <i class="fa fa-download"></i> <span>Download</span>
-                            <span class="pull-right-container">
-                            </span>
-                        </a>
-                    </li> -->
-                    <!-- End Download -->
 
                     <!-- /.sidebar -->
                 </ul>
