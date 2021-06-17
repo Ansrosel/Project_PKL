@@ -2,10 +2,10 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Regulasi extends CI_Controller
+class Surat_masuk extends CI_Controller
 {
 
-    private $title = "Regulasi";
+    private $title = "Surat Masuk";
 
     public function __construct()
     {
@@ -25,16 +25,16 @@ class Regulasi extends CI_Controller
         $crud->unset_bootstrap();
         $crud->unset_jquery();
         $crud->set_theme('bootstrap');
-        $crud->set_table('regulasi');
+        $crud->set_table('surat_masuk');
 
-        $crud->set_subject('Regulasi');
+        $crud->set_subject('Surat Keluar');
 
-        $crud->columns('id_kategori', 'nama_produk', 'nomor', 'tanggal_terbit', 'document');
-        $crud->fields('id_kategori', 'nama_produk', 'nomor', 'tanggal_terbit', 'document');
+        $crud->columns('id_kategori', 'judul_surat', 'nomor', 'tanggal_terbit', 'document');
+        $crud->fields('id_kategori', 'judul_surat', 'nomor', 'tanggal_terbit', 'document');
         $crud->set_field_upload('document', 'assets/uploads/files');
         $crud->required_fields();
 
-        $crud->set_relation('id_kategori','regulasi_kategori','nama_kategori');
+        $crud->set_relation('id_kategori', 'kategori_surat_masuk', 'nama_kategori');
 
         $crud->callback_before_upload(array($this, '_callback_upload'));
 

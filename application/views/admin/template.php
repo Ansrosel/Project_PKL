@@ -101,7 +101,7 @@
                                     <img src="<?= base_url() ?>lte/dist/img/user9-128x128.jpg" class="img-circle" alt="User Image">
 
                                     <p>
-                                        Diskominfo Jember - <?= $this->session->userdata('user_level') ?>
+                                        Jurusan Teknologi Informasi - <?= $this->session->userdata('user_level') ?>
                                         <small><?= $this->session->userdata('email') ?></small>
                                     </p>
                                 </li>
@@ -214,32 +214,33 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
-                        <ul class="treeview-menu">
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'penghargaan') echo 'active' ?>"><a href="<?= base_url() ?>admin/penghargaan"><i class="fa fa-circle-o"></i> Penghargaan</a></li>
-                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'struktur_organisasi') echo 'active' ?>"><a href="<?= base_url() ?>admin/struktur_organisasi/index/edit/1"><i class="fa fa-circle-o"></i> Struktur Organisasi</a></li>
+                        <!-- <ul class="treeview-menu">
+                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_masuk') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_masuk"><i class="fa fa-circle-o"></i> Surat Masuk</a></li>
+                            <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_keluar') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_keluar"><i class="fa fa-circle-o"></i> Surat Keluar</a></li>
                             <li class="<?php if (strtolower($this->uri->segment(2)) == 'sejarah_dinas') echo 'active' ?>"><a href="<?= base_url() ?>admin/sejarah_dinas/index/edit/1"><i class="fa fa-circle-o"></i> Sejarah Dinas</a></li>
                             <li class="<?php if (strtolower($this->uri->segment(2)) == 'visi_misi') echo 'active' ?>"><a href="<?= base_url() ?>admin/visi_misi/index/edit/1"><i class="fa fa-circle-o"></i> Visi Dan Misi</a></li>
                             <li class="<?php if (strtolower($this->uri->segment(2)) == 'tupoksi') echo 'active' ?>"><a href="<?= base_url() ?>admin/tupoksi"><i class="fa fa-circle-o"></i> Tugas Dan Fungsi</a></li>
                             <li class="<?php if (strtolower($this->uri->segment(2)) == 'personil') echo 'active' ?>"><a href="<?= base_url() ?>admin/personil/index/edit/1"><i class="fa fa-circle-o"></i> Personil Diskominfo</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <!-- End Profil -->
 
-
-                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'galery') echo 'active' ?>"><a href="<?= base_url() ?>admin/galery">
-                            <i class="fa fa-folder"></i> <span>Gallery</span>
+                    <!-- Surat Masuj -->
+                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_masuk') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_masuk">
+                            <i class="fa fa-folder"></i> <span>Surat Masuk</span>
                         </a>
                     </li>
+                    <!-- end surat masuk -->
 
-                    <!-- LInk Terkait -->
-                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'link') echo 'active' ?>"><a href="<?= base_url() ?>admin/link">
-                            <i class="fa fa-link"></i> <span>Link Terkait</span>
+                    <!-- Surat Keluar -->
+                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'surat_keluar') echo 'active' ?>"><a href="<?= base_url() ?>admin/surat_keluar">
+                            <i class="fa fa-link"></i> <span>Surat Keluar</span>
                         </a>
                     </li>
-                    <!-- End Link Terkait -->
+                    <!-- End Surat keluar -->
 
                     <!-- Setting -->
-                    <li class="treeview">
+                    <!-- <li class="treeview">
                         <a href="#">
                             <i class="fa fa-cogs"></i> <span>Setting</span>
                             <span class="pull-right-container">
@@ -255,7 +256,7 @@
                             </li>
                             <li><a href="#"><i class="fa fa-circle-o"></i> Footer</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <!-- End Setting -->
 
                     <!-- Start Menu -->
@@ -281,12 +282,12 @@
 
 
                     <!-- Download -->
-                    <li class="<?php if (strtolower($this->uri->segment(2)) == 'download') echo 'active' ?>"><a href="<?= base_url() ?>admin/download">
+                    <!-- <li class="<?php if (strtolower($this->uri->segment(2)) == 'download') echo 'active' ?>"><a href="<?= base_url() ?>admin/download">
                             <i class="fa fa-download"></i> <span>Download</span>
                             <span class="pull-right-container">
                             </span>
                         </a>
-                    </li>
+                    </li> -->
                     <!-- End Download -->
 
                     <!-- /.sidebar -->
@@ -339,7 +340,7 @@
             <div class="pull-right hidden-xs">
                 <b>Version</b> 2.4.0
             </div>
-            <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Tim IT Diskominfo Kab.Jember</a>.</strong> All rights
+            <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Tim PKL PLJ TIF 2020</a>.</strong> All rights
             reserved.
         </footer>
 
