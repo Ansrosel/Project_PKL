@@ -22,11 +22,14 @@ class Login extends CI_Controller
         $password = $this->input->post('password');
 
         $error_message = $auth->login($email, $password);
+        //die(var_export($error_message));
 
-        if (empty(trim($error_message))) {
-            redirect('home');
+        if (empty(trim($error_message['pesan']))) {
+            // redirect('home');
+            //die(var_export($error_message['data']['user_level']));
+            redirect(strtolower($error_message['data']['user_level']) . '/home');
         } else {
-            $this->session->set_flashdata('error_message', $error_message);
+            $this->session->set_flashdata('error_message', $error_message['pesan']);
             redirect('login');
         }
     }

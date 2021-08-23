@@ -12,13 +12,14 @@ class Auth
     {
         $ci = &get_instance();
 
-        $error_message = "";
+        $error_message = array();
 
         //============VALIDASI EMAIL===========================
         $db = $ci->db->where('email', $email)->get('users');
 
         if ($db->num_rows() < 1) {
-            $error_message = "Email Salah";
+            $error_message['pesan'] = "Email Salah";
+            $error_message['data'] = null;
         } else {
             //============VALIDASI PASSWORD===========================
             $db = $ci->db->where('email', $email)
@@ -26,11 +27,12 @@ class Auth
                 ->get('users');
 
             if ($db->num_rows() < 1) {
-                $error_message = "Password Salah";
+                $error_message['pesan'] = "Password Salah";
+                $error_message['data'] = null;
             } else {
                 $sess = array();
 
-                $db = $ci->db->select('users.*,user_levels.user_level')    
+                $db = $ci->db->select('users.*,user_levels.user_level')
                     ->where('email', $email)
                     ->where('password', md5($password))
                     ->join('user_levels', 'user_levels.id=users.user_level_id', 'left')
@@ -40,6 +42,8 @@ class Auth
 
 
                 $ci->session->set_userdata($sess);
+                $error_message['data'] = $sess;
+                $error_message['pesan'] = null;
             }
             //============VALIDASI PASSWORD===========================
 
@@ -73,13 +77,73 @@ class Auth
         //Administrator //user_level
 
         $ci = &get_instance();
-        $user_level=$ci->session->userdata('user_level');
+        $user_level = strtolower($ci->session->userdata('user_level'));
 
-        if (!(strtolower($user_level) == strtolower('administrator'))) {
+        if (strtolower($user_level) == strtolower('admin')) {
+            // die(var_export($user_level));
+            // redirect($user_level . '/home');
+        } elseif ((strtolower($user_level) == strtolower('tif'))) {
             //pass
-            redirect('admin/home');
+            redirect($user_level . '/home');
+        } elseif ((strtolower($user_level) == strtolower('mif'))) {
+            //pass
+            redirect($user_level . '/home');
+        } elseif ((strtolower($user_level) == strtolower('inter'))) {
+            //pass
+            redirect($user_level . '/home');
+        } elseif ((strtolower($user_level) == strtolower('tkk'))) {
+            //pass
+            redirect($user_level . '/home');
         }
-        
     }
-
 }
+   
+//     function is_tif()
+//     {
+//         //Administrator //user_level
+
+//         $ci = &get_instance();
+//         $user_level = $ci->session->userdata('user_level');
+
+//         if (!(strtolower($user_level) == strtolower('tif'))) {
+//             //pass
+//             redirect('tif/home');
+//         }
+//     }
+//     function is_mif()
+//     {
+//         //Administrator //user_level
+
+//         $ci = &get_instance();
+//         $user_level = $ci->session->userdata('user_level');
+
+//         if (!(strtolower($user_level) == strtolower('mif'))) {
+//             //pass
+//             redirect('mif/home');
+//         }
+//     }
+//     function is_inter()
+//     {
+//         //Administrator //user_level
+
+//         $ci = &get_instance();
+//         $user_level = $ci->session->userdata('user_level');
+
+//         if (!(strtolower($user_level) == strtolower('inter'))) {
+//             //pass
+//             redirect('inter/home');
+//         }
+//     }
+//     function is_tkk()
+//     {
+//         //Administrator //user_level
+
+//         $ci = &get_instance();
+//         $user_level = $ci->session->userdata('user_level');
+
+//         if (!(strtolower($user_level) == strtolower('tkk'))) {
+//             //pass
+//             redirect('tkk/home');
+//         }
+//     }
+// }
